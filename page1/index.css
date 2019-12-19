@@ -1,0 +1,242 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+.verticalContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profileTitleContainer {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto 1fr 520px;
+    grid-template-rows: auto;
+    height: auto;
+    width: 100%;
+}
+
+.profileTitleContainer .title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    /* dark */
+    color: #1A1A1A;
+}
+
+
+
+.mainContainer {
+    display: grid;
+    align-items: flex-start;
+    justify-content: center;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    padding: 40px 0;
+
+}
+
+.mainContainer .left {
+    padding: 40px 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 30px;
+    grid-template-columns: 200px ;
+}
+
+
+.mainContainer .right {
+    padding: 40px 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 30px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: repeat(2, auto);
+}
+
+.mainContainer .right .item {
+    display: flex;
+    flex-direction: column;
+    height: 91px;
+    width: 232px;
+}
+
+.mainContainer .right .grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    padding: 40px 0;
+    grid-gap: 20px;
+}
+
+.mainContainer .right .titleProp {
+    font-size: 18px;
+    line-height: 23px;
+    /* identical to box height */
+
+
+    /* grey */
+
+    color: #606060;
+}
+
+.mainContainer .right .item .inputInline {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #CDCDCD;
+    width: 232px;
+    height: 48px;
+    font-size: 20px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #B4B4B4;
+    font-size: 20px;
+}
+
+.mainContainer .right .grid .item {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 30px;
+    display: grid;
+    grid-gap: 5px 30px;
+    grid-template-columns: 270px 160px;
+    grid-template-rows: auto auto;
+}
+
+.mainContainer .right .grid .item .title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    /* dark */
+
+    color: #1A1A1A;
+}
+
+.mainContainer .right .grid .item .status {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.mainContainer .right .grid .item .status .left {
+    font-size: 18px;
+    line-height: 23px;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    /* identical to box height */
+
+    /* grey */
+
+    color: #606060;
+}
+
+.mainContainer .right .grid .item .status .right {
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    padding-left: 10px;
+
+    color: #4B9FDD;
+}
+
+.mainContainer .right .grid .item .prop {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.problemsNumbersContainer {
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr auto auto auto auto;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    width: 100%;
+
+}
+
+.problemsNumbersContainer .numbers {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #9FC9E8;
+}
+
+.problemsNumbersContainer .selected {
+    color: #4B9FDD;
+}
+
+.saveButton {
+    display: flex;
+    color: #4B9FDD;
+    font-size: 20px;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 1300px) and (min-width: 800px) {
+    .profileTitleContainer {
+        grid-template-columns: auto 20px auto;
+    }
+
+    .profileTitleContainer .title .left {
+        justify-content: flex-end;
+    }
+
+    .mainContainer {
+
+        grid-template-columns: auto;
+        grid-template-rows: auto 40px auto;
+    }
+    .mainContainer .right .grid .item {
+        grid-template-columns: auto auto;
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .profileTitleContainer {
+        grid-template-columns: auto 20px auto;
+    }
+
+    .profileTitleContainer .title .left {
+        justify-content: flex-end;
+    }
+
+    .mainContainer {
+
+        grid-template-columns: auto;
+        grid-template-rows: auto 40px auto;
+    }
+
+    .mainContainer .left {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(6, auto);
+    }
+    .mainContainer .right .grid .item {
+        grid-template-columns: auto auto;
+
+    }
+
+
+}
